@@ -1,0 +1,87 @@
+html,
+body,
+#root {
+    height: 100%;
+}
+
+.bkg {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+    animation: Animation 5s ease infinite;
+}
+
+.content {
+    height: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    font-family: Montserrat;
+    background: #ccc;
+    /*background: linear-gradient(90deg, rgba(59,55,120,1) 0%, rgba(135,135,135,1) 35%, rgba(0,212,255,1) 100%);*/
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    margin: 0;
+}
+
+.content {
+    margin: 0 auto;
+    width: 1121px;
+}
+
+.button-control-wp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+    height: 100%;
+    justify-content: center;
+}
+
+.button-control-wp > div {
+    padding: 10px 0px;
+    display: flex;
+}
+
+.button-control-wp > div input[type=text] {
+    width: 400px;
+    line-height: 30px;
+    margin-right: 5px;
+    padding: 3px 0px 3px 15px;
+}
+
+.button-control-wp > div button {
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+.auto-complete-control-wp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.auto-complete-control-wp textarea {
+    width: 80%;
+    min-height: 80px;
+    padding: 10px;
+    resize: none;
+}
