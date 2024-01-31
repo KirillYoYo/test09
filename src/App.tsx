@@ -10,6 +10,7 @@ import {ButtonProps} from "./ButtonControl/ButtonControl.types";
 
 const storeBtn1 = new ButtonControlStore()
 const storeBtn2 = new ButtonControlStore()
+const storeAutoComplete = new ButtonControlStore()
 
 const App = (observer(() => {
 
@@ -26,7 +27,7 @@ const App = (observer(() => {
     })
   }
 
-  const Btn0 = createButton(storeBtn1, [
+  const Btn1 = createButton(storeBtn1, [
     {position: 'right', callback: () => storeBtn1.changeTextAction('')},
     {position: 'right', callback: () => storeBtn1.changeTextAction('Hello world!')},
   ])
@@ -39,10 +40,10 @@ const App = (observer(() => {
     <>
       <div className='content'>
         <div className="button-control-wp">
-          <Btn0 />
+          <Btn1 />
           <Btn2 />
         </div>
-        <AutoCompleteControl />
+        <AutoCompleteControl store={storeAutoComplete} maxHints={3} />
       </div>
       <div style={{background: bkgStyle}} className="bkg"></div>
     </>

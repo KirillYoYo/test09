@@ -85,3 +85,34 @@ h2 {
     padding: 10px;
     resize: none;
 }
+
+.hints-select {
+    background: #fff;
+    position: absolute;
+    width: 300px;
+    transform: translateX(-50%);
+}
+.hints-select .cur-value {
+    height: 35px;
+    margin-bottom: 5px;
+}
+.hints-select .hints-options {
+
+}
+
+.hints-select .hint-option {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.hints-select .hint-option:hover {
+    background: rgba(0,0,0, 0.3);
+}
+
+.hints-select .hint-option img {
+    margin-left: 5px;
+}
