@@ -44,6 +44,7 @@ const App = (observer(() => {
           <Btn2 />
         </div>
         <AutoCompleteControl store={storeAutoComplete} maxHints={3} />
+        <AutoCompleteControl store={storeAutoComplete} maxHints={10} />
       </div>
       <div style={{background: bkgStyle}} className="bkg"></div>
     </>
