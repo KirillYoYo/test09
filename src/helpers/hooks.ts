@@ -6,7 +6,6 @@ export const useGetBkg = () => {
   )
 
   const handleScroll = () => {
-    console.log('window.scrollY', window.scrollY)
     const h = window.scrollY;
     setBkgStyle(
       `linear-gradient(90deg, rgba(${199 - h / 2},199,199,1) ${0 + h / 100}%,
