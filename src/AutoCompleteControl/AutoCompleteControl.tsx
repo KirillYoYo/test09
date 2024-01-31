@@ -1,10 +1,11 @@
-import React, {useDeferredValue, useEffect, useState} from 'react';
+import React, {useDeferredValue, useEffect, useRef, useState} from 'react';
 import {CountryInfo, getCountryByName} from "../api/apiService";
 
 const AutoCompleteControl = ({maxHints, store}: any) => {
   const [curText, setCurText] = useState('')
   const [hints, setHints] = useState([] as CountryInfo[])
   const [loading, setLoading] = useState(false)
+  const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
   const deferredCurText = useDeferredValue(curText);
 
@@ -19,7 +20,8 @@ const AutoCompleteControl = ({maxHints, store}: any) => {
     }).finally(() => {
       controller.abort();
       setLoading(false)
-    }).catch((e) => {})
+    }).catch((e) => {
+    })
 
     return () => {
       !loading && controller.abort()
@@ -37,11 +39,12 @@ const AutoCompleteControl = ({maxHints, store}: any) => {
     arr.push(`${name}`)
     store.changeTextAction(arr.join(' '))
     setHints([])
+    textAreaRef?.current?.focus()
   }
 
   return (
     <div className="auto-complete-control-wp">
-      <textarea onChange={onChange} value={store.text}></textarea>
+      <textarea ref={textAreaRef} onChange={onChange} value={store.text}></textarea>
       <div style={{position: 'relative'}}>
         <div className="hints-select">
           <div className="hints-options">
