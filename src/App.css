@@ -92,10 +92,12 @@ h2 {
     width: 300px;
     transform: translateX(-50%);
 }
+
 .hints-select .cur-value {
     height: 35px;
     margin-bottom: 5px;
 }
+
 .hints-select .hints-options {
 
 }
@@ -110,7 +112,7 @@ h2 {
 }
 
 .hints-select .hint-option:hover {
-    background: rgba(0,0,0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .hints-select .hint-option img {

@@ -16,7 +16,7 @@ const App = (observer(() => {
 
   const bkgStyle = useGetBkg()
 
-  function createButton (store: ButtonControlStore, buttons: ButtonProps[]) {
+  function createButton(store: ButtonControlStore, buttons: ButtonProps[]) {
     return observer(() => {
       return (
         <ButtonControl
@@ -40,11 +40,11 @@ const App = (observer(() => {
     <>
       <div className='content'>
         <div className="button-control-wp">
-          <Btn1 />
-          <Btn2 />
+          <Btn1/>
+          <Btn2/>
         </div>
-        <AutoCompleteControl store={storeAutoComplete} maxHints={3} />
-        <AutoCompleteControl store={storeAutoComplete} maxHints={10} />
+        <AutoCompleteControl store={storeAutoComplete} maxHints={3}/>
+        <AutoCompleteControl store={storeAutoComplete} maxHints={10}/>
       </div>
       <div style={{background: bkgStyle}} className="bkg"></div>
     </>
