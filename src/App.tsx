@@ -11,6 +11,7 @@ import {ButtonProps} from "./ButtonControl/ButtonControl.types";
 const storeBtn1 = new ButtonControlStore()
 const storeBtn2 = new ButtonControlStore()
 const storeAutoComplete = new ButtonControlStore()
+const storeAutoComplete2 = new ButtonControlStore()
 
 const App = (observer(() => {
 
@@ -44,7 +45,7 @@ const App = (observer(() => {
           <Btn2/>
         </div>
         <AutoCompleteControl store={storeAutoComplete} maxHints={3}/>
-        <AutoCompleteControl store={storeAutoComplete} maxHints={10}/>
+        <AutoCompleteControl store={storeAutoComplete2} maxHints={10}/>
       </div>
       <div style={{background: bkgStyle}} className="bkg"></div>
     </>
